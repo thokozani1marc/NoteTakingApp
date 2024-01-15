@@ -1,0 +1,94 @@
+
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #15202b;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+}
+
+#app {
+    background-color: #192734;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    max-width: 600px;
+    margin: auto;
+}
+
+#note-input {
+    width: calc(100% - 120px);
+    padding: 10px;
+    border: 1px solid #38444d;
+    background-color: #192734;
+    color: #fff;
+    border-radius: 14px;
+    margin-right: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+#note-input:focus {
+    box-shadow: 0 0 0 2px #1a91da;
+}
+
+#add-note-btn {
+    padding: 10px 20px;
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-note-btn:hover {
+    background-color: #1a91da;
+}
+
+.note {
+    background-color: #192734;
+    border: 1px solid #38444d;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 14px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.note button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+
+    transition: background-color 0.3s ease;
+}
+
+.note button:hover {
+    background-color: #cc0000;
+}
+
+/* Add this class in JavaScript when deleting a note */
+.fadeOut {
+    animation: fadeOutDown 0.5s ease forwards;
+}
+
+@keyframes fadeOutDown {
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
